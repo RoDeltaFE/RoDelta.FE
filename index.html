@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ro.Delta — Ambarcațiuni & Închirieri</title>
+  <style>
+    :root{--primary:#0b6671;--accent:#eaf6f8;--text:#0b2b36;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text);background:#f7fbfb}
+    header{display:flex;align-items:center;gap:16px;padding:20px; background:linear-gradient(180deg,var(--accent),#d6f0f3);border-bottom:1px solid rgba(11,43,54,0.06)}
+    .logo{height:72px;width:auto}
+    .brand{display:flex;flex-direction:column}
+    .brand h1{margin:0;font-size:22px;letter-spacing:0.4px}
+    .brand p{margin:2px 0 0 0;color:#07545a;font-size:13px}
+    nav{margin-left:auto}
+    nav a{color:var(--primary);text-decoration:none;margin-left:12px;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover{background:rgba(11,102,113,0.06)}
+    .wrap{max-width:1000px;margin:28px auto;padding:0 16px}
+    .hero{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .intro{flex:1;min-width:260px}
+    h2{margin-top:0}
+    .lead{color:#07545a;margin-bottom:12px}
+    .btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .card{background:#fff;border-radius:10px;padding:16px;border:1px solid rgba(11,43,54,0.04);box-shadow:0 8px 22px rgba(7,30,36,0.03)}
+    .card h3{margin-top:0}
+    footer{max-width:1000px;margin:28px auto;padding:18px 16px;text-align:center;color:#27474b;font-size:14px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:16px}
+    .gallery img{width:100%;border-radius:10px;transition:transform .3s ease, box-shadow .3s ease}
+    .gallery img:hover{transform:scale(1.03);box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+    .contact-list{list-style:none;padding:0;margin:8px 0 0 0}
+    .contact-list li{margin:6px 0}
+    @media(max-width:520px){
+      .logo{height:56px}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpeg" alt="Emblema Ro.Delta" class="logo" />
+    <div class="brand">
+      <h1>Ro.Delta</h1>
+      <p>Ambarcațiuni • Închirieri • Suport tehnic</p>
+    </div>
+    <nav>
+      <a href="#acasa">Acasă</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="acasa">
+    <section class="hero">
+      <div class="intro card">
+        <h2>Bine ai venit la Ro.Delta</h2>
+        <p class="lead">Pasiune pentru navigație din 2009 — servicii de vânzare, închiriere și transport ambarcațiuni.</p>
+        <p>Explorează catalogul nostru sau descarcă broșurile pentru detalii tehnice și oferte curente. Contactează-ne pentru oferte personalizate sau închirieri pentru evenimente.</p>
+        <p style="margin-top:12px">
+          <a class="btn" href="#catalog">Vezi catalog</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="catalog" style="margin-top:20px">
+      <div class="card">
+        <h3>Catalog & Broșuri</h3>
+        <p>Mai jos găsești PDF-urile încărcate. Apasă butonul pentru a descărca sau pentru a le deschide într-o filă nouă.</p>
+        <p>
+          <a class="btn" href="catalog.pdf" target="_blank">📘 Descarcă Catalog</a>
+          <a class="btn" href="brochure.pdf" target="_blank" style="background:#07545a">📗 Descarcă Broșură</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="galerie" style="margin-top:28px">
+      <div class="card">
+        <h2>Galerie foto</h2>
+        <p>Imagini reprezentative din cataloagele Ro.Delta – ambarcațiuni, detalii și prezentări vizuale.</p>
+        <div class="gallery">
+          <img src="catalog_p1.jpg" alt="Catalog pag 1">
+          <img src="catalog_p2.jpg" alt="Catalog pag 2">
+          <img src="catalog_p3.jpg" alt="Catalog pag 3">
+          <img src="brochure_p1.jpg" alt="Broșură pag 1">
+          <img src="brochure_p2.jpg" alt="Broșură pag 2">
+          <img src="brochure_p3.jpg" alt="Broșură pag 3">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <div class="card">
+        <h3>Contact</h3>
+        <form onsubmit="alert('Mesaj trimis (demo).'); return false;" style="margin-top:12px;display:grid;gap:10px">
+          <input name="nume" type="text" placeholder="Nume" required style="padding:10px;border-radius:8px;border:1px solid #e6f2f3">
+          <input name="email" type="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #e6f2f3">
+          <textarea name="mesaj" rows="4" placeholder="Mesaj" style="padding:10px;border-radius:8px;border:1px solid #e6f2f3"></textarea>
+          <button class="btn" type="submit" style="border:none;cursor:pointer">Trimite</button>
+        </form>
+        <div style="margin-top:12px">
+          <strong>Date:</strong>
+          <ul class="contact-list">
+            <li>Adresă: Str. Feroviarilor nr.37, București</li>
+            <li>Telefon: +40 21 224 2376</li>
+            <li>Email: rodelta2025@gmail.com</li>
+            <li>Instagram: @rodelta.luxury</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Ro.Delta — Toate drepturile rezervate.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
